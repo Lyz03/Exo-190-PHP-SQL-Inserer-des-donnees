@@ -72,17 +72,35 @@ try {
 
     $pdo->exec($sql1);
 
-    $sql1 = $insertUser . "('name4', 'firstname4', 'email4@mail.com', 'P@s€WooRd', 'adresse4', '00004', 'country4')";
+    $sql2 = $insertUser . "('name5', 'firstname5', 'email5@mail.com', 'P@s€WooRdd', 'adresse5', '00005', 'country5')";
 
-    $pdo->exec($sql1);
+    $pdo->exec($sql2);
 
-    $sql1 = $insertUser . "('name4', 'firstname4', 'email4@mail.com', 'P@s€WooRd', 'adresse4', '00004', 'country4')";
+    $sql3 = $insertUser . "('name6', 'firstname6', 'email6@mail.com', 'P@s€WoooRd', 'adresse6', '00006', 'country6')";
 
-    $pdo->exec($sql1);
+    $pdo->exec($sql3);
+
+    $pdo->commit();
 
     /**
      * 6. A l'aide des méthodes beginTransaction, commit et rollBack, insérez trois nouveaux produits dans la table produit.
      */
+
+    $pdo->beginTransaction();
+    $insertUser = 'INSERT INTO product (title, price, short_description, long_description) VALUES ';
+    $sql1 = $insertUser . "('titre4', '1.55', 'the short description nb4', 'the loooooooooooooong description nb4')";
+
+    $pdo->exec($sql1);
+
+    $sql2 = $insertUser . "('titre5', '17.50', 'the short description nb5', 'the loooooooooooooong description nb5')";
+
+    $pdo->exec($sql2);
+
+    $sql3 = $insertUser . "('titre6', '18.50', 'the short description nb6', 'the loooooooooooooong description nb6')";
+
+    $pdo->exec($sql3);
+
+    $pdo->commit();
 }
 catch (PDOException $e) {
     die();
