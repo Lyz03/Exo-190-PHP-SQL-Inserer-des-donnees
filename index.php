@@ -86,6 +86,7 @@ try {
      * 6. A l'aide des méthodes beginTransaction, commit et rollBack, insérez trois nouveaux produits dans la table produit.
      */
 
+    // TODO Votre code ici.
     $pdo->beginTransaction();
     $insertUser = 'INSERT INTO product (title, price, short_description, long_description) VALUES ';
     $sql1 = $insertUser . "('titre4', '1.55', 'the short description nb4', 'the loooooooooooooong description nb4')";
