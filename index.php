@@ -30,7 +30,7 @@ try {
     // TODO votre code ici.
     $sql = "
         INSERT INTO product (title, price, short_description, long_description) 
-        VALUES ('titre1', '10.96', 'the short description nb1', 'the loooooooooooooong description nb1');
+        VALUES ('titre1', 10.90, 'the short description nb1', 'the loooooooooooooong description nb1');
     ";
 
     $pdo->exec($sql);
@@ -55,8 +55,8 @@ try {
     // TODO Votre code ici.
     $sql = "
         INSERT INTO product (title, price, short_description, long_description) 
-        VALUES ('titre2', '10.60', 'the short description nb2', 'the loooooooooooooong description nb2'),
-               ('titre3', '1.50', 'the short description nb3', 'the loooooooooooooong description nb3');
+        VALUES ('titre2', 10.60, 'the short description nb2', 'the loooooooooooooong description nb2'),
+               ('titre3', 1.50, 'the short description nb3', 'the loooooooooooooong description nb3');
     ";
 
     $pdo->exec($sql);
@@ -89,15 +89,15 @@ try {
     // TODO Votre code ici.
     $pdo->beginTransaction();
     $insertUser = 'INSERT INTO product (title, price, short_description, long_description) VALUES ';
-    $sql1 = $insertUser . "('titre4', '1.55', 'the short description nb4', 'the loooooooooooooong description nb4')";
+    $sql1 = $insertUser . "('titre4', 1.55, 'the short description nb4', 'the loooooooooooooong description nb4')";
 
     $pdo->exec($sql1);
 
-    $sql2 = $insertUser . "('titre5', '17.50', 'the short description nb5', 'the loooooooooooooong description nb5')";
+    $sql2 = $insertUser . "('titre5', 17.50, 'the short description nb5', 'the loooooooooooooong description nb5')";
 
     $pdo->exec($sql2);
 
-    $sql3 = $insertUser . "('titre6', '18.50', 'the short description nb6', 'the loooooooooooooong description nb6')";
+    $sql3 = $insertUser . "('titre6', 18.50, 'the short description nb6', 'the loooooooooooooong description nb6')";
 
     $pdo->exec($sql3);
 
